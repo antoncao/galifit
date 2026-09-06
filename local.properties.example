@@ -1,0 +1,17 @@
+## Copia este archivo como `local.properties` en la raíz del proyecto.
+
+sdk.dir=C\:\\Users\\TU_USUARIO\\AppData\\Local\\Android\\Sdk
+
+# Edamam (Meal Planner, Recipe, Shopping List)
+EDAMAM_APP_ID=
+EDAMAM_APP_KEY=
+EDAMAM_ACCOUNT_USER=
+
+# DeepL (traducción de ejercicios, opcional)
+DEEPL_API_KEY=
+
+# Generador de rutinas: local | gemini
+ROUTINE_GENERATOR=gemini
+
+# Catálogo de ejercicios: exercisedb | wger
+EXERCISE_CATALOG_SOURCE=exercisedb

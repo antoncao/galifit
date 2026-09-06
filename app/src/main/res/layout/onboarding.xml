@@ -1,0 +1,48 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/onboardingProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:indicatorColor="@color/primary"
+        app:trackColor="@color/light_blue" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/onboardingBackButton"
+            android:text="Atrás"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/dark_gray"
+            android:visibility="gone"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/onboardingNextButton"
+            android:text="Siguiente"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/primary"
+            android:layout_height="wrap_content"
+            android:textColor="@color/on_accent"/>
+    </LinearLayout>
+
+</LinearLayout>

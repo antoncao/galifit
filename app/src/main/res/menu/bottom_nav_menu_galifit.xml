@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_inicio"
+        android:icon="@drawable/outline_inicio_icon_galifit_24"
+        android:title="@string/title_inicio" />
+    <item
+        android:id="@+id/navigation_platos"
+        android:icon="@drawable/outline_meal_icon_galifit_24"
+        android:title="@string/title_platos" />
+    <item
+        android:id="@+id/navigation_ejercicios"
+        android:icon="@drawable/outline_ejercicio_icon_galifit_24"
+        android:title="@string/title_ejercicios" />
+    <item
+        android:id="@+id/navigation_menu"
+        android:icon="@drawable/outline_menu_icon_galifit_24"
+        android:title="@string/title_menu" />
+</menu>

@@ -1,0 +1,10 @@
+<resources>
+    <dimen name="text_margin">16dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="drawer_width">280dp</dimen>
+    <dimen name="home_item_card_height">125dp</dimen>
+    <dimen name="home_meal_image_size">72dp</dimen>
+    <dimen name="home_exercise_icon_size">72dp</dimen>
+</resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:text="Edad"
+        android:textSize="14sp"
+        android:textColor="@color/text_primary"
+        android:fontFamily="@font/inter_medium"
+        android:layout_marginBottom="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etDialogAge"
+        android:hint="Ej: 25"
+        android:inputType="number"
+        android:maxLength="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:text="Sexo"
+        android:textSize="14sp"
+        android:textColor="@color/text_primary"
+        android:fontFamily="@font/inter_medium"
+        android:layout_marginBottom="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RadioGroup
+        android:id="@+id/rgDialogSex"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbDialogMale"
+            android:text="Hombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp" />
+
+        <RadioButton
+            android:id="@+id/rbDialogFemale"
+            android:text="Mujer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+
+    <TextView
+        android:text="Altura (cm)"
+        android:textSize="14sp"
+        android:textColor="@color/text_primary"
+        android:fontFamily="@font/inter_medium"
+        android:layout_marginBottom="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etDialogHeight"
+        android:hint="Ej: 175"
+        android:inputType="number"
+        android:maxLength="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:text="Peso (kg)"
+        android:textSize="14sp"
+        android:textColor="@color/text_primary"
+        android:fontFamily="@font/inter_medium"
+        android:layout_marginBottom="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etDialogWeight"
+        android:hint="Ej: 70"
+        android:inputType="numberDecimal"
+        android:maxLength="5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

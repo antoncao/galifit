@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fabChatAssistant"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/chat_fab_content_description"
+    android:src="@drawable/outline_chat_24"
+    app:backgroundTint="@color/primary"
+    app:tint="@color/on_accent"
+    app:elevation="8dp"
+    app:fabSize="normal"
+    app:maxImageSize="24dp" />

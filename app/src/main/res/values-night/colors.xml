@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#0D1F3C</color>
+    <color name="background_card">#152B4D</color>
+    <color name="light_blue">#0D1F3C</color>
+    <color name="text_primary">@color/primary</color>
+    <color name="blue">#2869F0</color>
+    <color name="primary">#8FC2FF</color>
+    <color name="primary_dark">#0A1628</color>
+    <color name="primary_light">#1E3A5F</color>
+    <color name="dark_gray">#9EADC8</color>
+    <color name="gray">#9EADC8</color>
+    <color name="on_accent">#0D1F3C</color>
+    <color name="divider">#2A4570</color>
+    <color name="input_background">#1A3055</color>
+    <color name="border">#2A4570</color>
+    <color name="overlay_scrim">#CC0D1F3C</color>
+    <color name="nutrient_card">#1A3055</color>
+    <color name="nav_icon">#8FC2FF</color>
+    <color name="gradient_start">#0D1F3C</color>
+    <color name="gradient_center">#122A4D</color>
+    <color name="gradient_end">#1A3A6B</color>
+    <color name="macro_protein_bg">#1E3A5F</color>
+    <color name="macro_protein_text">#8FC2FF</color>
+    <color name="macro_carbs_bg">#243D66</color>
+    <color name="macro_carbs_text">#A8D4FF</color>
+    <color name="macro_fat_bg">#2A4570</color>
+    <color name="macro_fat_text">#C5E3FF</color>
+</resources>

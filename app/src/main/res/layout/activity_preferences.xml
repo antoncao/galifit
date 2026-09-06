@@ -1,0 +1,994 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/tvPreferencesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/inter_bold"
+        android:text="Preferencias"
+        android:textColor="@color/primary"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@id/btnSavePreferences"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPreferencesTitle">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvPreferencesSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_regular"
+                android:text="Desde aquí puedes volver a indicar tu estado físico, gustos y objetivos para personalizar tus planes."
+                android:textColor="@color/dark_gray"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:id="@+id/cardBasicData"
+                android:background="@drawable/bg_preference_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Datos básicos"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/inter_semibold"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageButton
+                        android:id="@+id/btnEditBasicData"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Editar"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:scaleType="centerInside" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvBasicDataValue"
+                    android:background="@drawable/bg_chip_blue"
+                    android:textColor="@color/on_accent"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Sin definir"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardActivity"
+                android:background="@drawable/bg_preference_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Nivel de actividad física"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/inter_semibold"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageButton
+                        android:id="@+id/btnEditActivity"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Editar"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:scaleType="centerInside" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvActivityValue"
+                    android:background="@drawable/bg_chip_blue"
+                    android:textColor="@color/on_accent"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Sin definir"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardObjective"
+                android:background="@drawable/bg_preference_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Objetivo principal"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/inter_semibold"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageButton
+                        android:id="@+id/btnEditObjective"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Editar"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:scaleType="centerInside" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvObjectiveValue"
+                    android:background="@drawable/bg_chip_blue"
+                    android:textColor="@color/on_accent"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Sin definir"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardDiet"
+                android:background="@drawable/bg_preference_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Tipo de dieta"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/inter_semibold"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageButton
+                        android:id="@+id/btnEditDiet"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Editar"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:scaleType="centerInside" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvDietValue"
+                    android:background="@drawable/bg_chip_blue"
+                    android:textColor="@color/on_accent"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Sin definir"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardCuisines"
+                android:background="@drawable/bg_preference_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Cocinas preferidas"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/inter_semibold"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/btnEditCuisines"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageButton
+                        android:id="@+id/btnEditCuisines"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Editar"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:scaleType="centerInside" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvCuisinesValue"
+                    android:background="@drawable/bg_chip_blue"
+                    android:textColor="@color/on_accent"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Todas"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="Tipos de cocina que prefieres para tus platos del plan."
+                    android:textColor="@color/dark_gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardAvoidedFoods"
+                android:background="@drawable/bg_preference_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Alimentos que evitas"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/inter_semibold"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/btnEditAvoidedFoods"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageButton
+                        android:id="@+id/btnEditAvoidedFoods"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Editar"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:scaleType="centerInside" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvAvoidedFoodsValue"
+                    android:background="@drawable/bg_chip_blue"
+                    android:textColor="@color/on_accent"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Ninguno"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="Alimentos o grupos que no te gustan y quieres excluir del plan."
+                    android:textColor="@color/dark_gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardHealth"
+                android:background="@drawable/bg_preference_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Restricciones alimentarias"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/inter_semibold"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageButton
+                        android:id="@+id/btnEditHealth"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Editar"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:scaleType="centerInside" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvHealthValue"
+                    android:background="@drawable/bg_chip_blue"
+                    android:textColor="@color/on_accent"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Ninguna"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardMeals"
+                android:background="@drawable/bg_preference_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Comidas al día"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/inter_semibold"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageButton
+                        android:id="@+id/btnEditMeals"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Editar"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:scaleType="centerInside" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvMealsValue"
+                    android:background="@drawable/bg_chip_blue"
+                    android:textColor="@color/on_accent"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="3"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardProteinSupplements"
+                android:background="@drawable/bg_preference_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Suplementos de proteína"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/inter_semibold"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/btnEditProteinSupplements"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageButton
+                        android:id="@+id/btnEditProteinSupplements"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Editar"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:scaleType="centerInside" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvProteinSupplementsValue"
+                    android:background="@drawable/bg_chip_blue"
+                    android:textColor="@color/on_accent"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="No"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="Si lo aceptas, solo se añadirá un suplemento cuando el plan diario se quede corto de proteína."
+                    android:textColor="@color/dark_gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="Entrenamiento"
+                android:textColor="@color/primary"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/cardTrainingDays"
+                android:background="@drawable/bg_preference_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Días por semana"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/inter_semibold"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageButton
+                        android:id="@+id/btnEditTrainingDays"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Editar"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:scaleType="centerInside" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tvTrainingDaysValue"
+                    android:background="@drawable/bg_chip_blue"
+                    android:textColor="@color/on_accent"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Sin definir"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardTrainingMinutes"
+                android:background="@drawable/bg_preference_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Duración por sesión"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/inter_semibold"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageButton
+                        android:id="@+id/btnEditTrainingMinutes"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Editar"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:scaleType="centerInside" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tvTrainingMinutesValue"
+                    android:background="@drawable/bg_chip_blue"
+                    android:textColor="@color/on_accent"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Sin definir"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardTrainingLocation"
+                android:background="@drawable/bg_preference_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Lugar de entrenamiento"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/inter_semibold"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageButton
+                        android:id="@+id/btnEditTrainingLocation"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Editar"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:scaleType="centerInside" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tvTrainingLocationValue"
+                    android:background="@drawable/bg_chip_blue"
+                    android:textColor="@color/on_accent"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Sin definir"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardTrainingEquipment"
+                android:background="@drawable/bg_preference_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Equipamiento disponible"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/inter_semibold"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageButton
+                        android:id="@+id/btnEditTrainingEquipment"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Editar"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:scaleType="centerInside" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tvTrainingEquipmentValue"
+                    android:background="@drawable/bg_chip_blue"
+                    android:textColor="@color/on_accent"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Ninguno"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardTrainingLevel"
+                android:background="@drawable/bg_preference_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Nivel de experiencia"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/inter_semibold"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageButton
+                        android:id="@+id/btnEditTrainingLevel"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Editar"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:scaleType="centerInside" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tvTrainingLevelValue"
+                    android:background="@drawable/bg_chip_blue"
+                    android:textColor="@color/on_accent"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Sin definir"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardTrainingSplit"
+                android:background="@drawable/bg_preference_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Tipo de rutina"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/inter_semibold"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageButton
+                        android:id="@+id/btnEditTrainingSplit"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Editar"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:scaleType="centerInside" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tvTrainingSplitValue"
+                    android:background="@drawable/bg_chip_blue"
+                    android:textColor="@color/on_accent"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Sin definir"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardTrainingObjective"
+                android:background="@drawable/bg_preference_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Objetivo de entrenamiento"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/inter_semibold"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageButton
+                        android:id="@+id/btnEditTrainingObjective"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Editar"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:scaleType="centerInside" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tvTrainingObjectiveValue"
+                    android:background="@drawable/bg_chip_blue"
+                    android:textColor="@color/on_accent"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Sin definir"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardTrainingLimitations"
+                android:background="@drawable/bg_preference_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Limitaciones / lesiones"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/inter_semibold"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageButton
+                        android:id="@+id/btnEditTrainingLimitations"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Editar"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:scaleType="centerInside" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tvTrainingLimitationsValue"
+                    android:background="@drawable/bg_chip_blue"
+                    android:textColor="@color/on_accent"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Ninguna"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardSedentaryNotifications"
+                android:background="@drawable/bg_preference_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Notificaciones de sedentarismo"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/inter_semibold"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageButton
+                        android:id="@+id/btnEditSedentaryNotifications"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Editar"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:scaleType="centerInside" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tvSedentaryNotificationsValue"
+                    android:background="@drawable/bg_chip_blue"
+                    android:textColor="@color/on_accent"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Desactivadas"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+                    <TextView
+                        android:text="Fuente de pasos"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="@font/inter_semibold"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageButton
+                        android:id="@+id/btnEditSedentarySource"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Editar fuente de pasos"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:scaleType="centerInside" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tvSedentarySourceValue"
+                    android:background="@drawable/bg_chip_blue"
+                    android:textColor="@color/on_accent"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="No aplica"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="Health Connect integra reloj y otras apps. El sensor del móvil no requiere apps externas, pero solo cuenta pasos llevando el teléfono."
+                    android:textColor="@color/dark_gray"
+                    android:textSize="12sp" />
+                <Button
+                    android:id="@+id/btnTestSedentaryNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="@color/primary"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Probar aviso ahora"
+                    android:textAllCaps="false"
+                    android:textColor="@color/on_accent"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnSavePreferences"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/primary"
+        android:fontFamily="@font/inter_bold"
+        android:text="Guardar cambios"
+        android:textAllCaps="false"
+        android:textColor="@color/on_accent"
+        android:textSize="16sp"
+        app:cornerRadius="24dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemIconTint="@color/nav_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_nav_menu_galifit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

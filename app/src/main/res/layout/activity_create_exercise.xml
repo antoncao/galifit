@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollCreateExercise"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="24dp">
+
+            <TextView
+                android:id="@+id/tvScreenTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Añadir ejercicio"
+                android:textSize="22sp"
+                android:textStyle="bold|italic"
+                android:textColor="@color/blue"
+                android:fontFamily="@font/inter_bold"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre del ejercicio"
+                android:textSize="15sp"
+                android:textStyle="bold|italic"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/inter_bold"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/etExerciseName"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_input_field"
+                android:paddingHorizontal="14dp"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/inter_regular"
+                android:inputType="textCapSentences"
+                android:layout_marginBottom="20dp"
+                android:autofillHints="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Series"
+                android:textSize="15sp"
+                android:textStyle="bold|italic"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/inter_bold"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/etSeries"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_input_field"
+                android:paddingHorizontal="14dp"
+                android:inputType="number"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/inter_regular"
+                android:layout_marginBottom="20dp"
+                android:autofillHints="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Repeticiones / Duración"
+                android:textSize="15sp"
+                android:textStyle="bold|italic"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/inter_bold"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <EditText
+                    android:id="@+id/etRepsDuration"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/bg_input_field"
+                    android:paddingHorizontal="14dp"
+                    android:inputType="text"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_primary"
+                    android:fontFamily="@font/inter_regular"
+                    android:hint="Ej. 10-12 o 30 s"
+                    android:autofillHints="" />
+
+                <Spinner
+                    android:id="@+id/spMeasurementType"
+                    android:layout_width="140dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_input_field"
+                    android:paddingHorizontal="8dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descanso entre series (segundos)"
+                android:textSize="15sp"
+                android:textStyle="bold|italic"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/inter_bold"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/etRestSeconds"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_input_field"
+                android:paddingHorizontal="14dp"
+                android:inputType="number"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/inter_regular"
+                android:hint="Ej. 60"
+                android:layout_marginBottom="20dp"
+                android:autofillHints="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notas"
+                android:textSize="15sp"
+                android:textStyle="bold|italic"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/inter_bold"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/etNotes"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:background="@drawable/bg_input_field"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="12dp"
+                android:gravity="top|start"
+                android:inputType="textMultiLine|textCapSentences"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/inter_regular"
+                android:layout_marginBottom="32dp"
+                android:autofillHints="" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSaveExercise"
+                android:layout_width="200dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:text="Guardar"
+                android:textSize="16sp"
+                android:textStyle="bold|italic"
+                android:textAllCaps="false"
+                android:textColor="@color/on_accent"
+                app:backgroundTint="@color/blue"
+                app:cornerRadius="14dp" />
+
+            <ProgressBar
+                android:id="@+id/progressSaveExercise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemIconTint="@color/nav_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_nav_menu_galifit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
